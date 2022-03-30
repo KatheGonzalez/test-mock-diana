@@ -1,0 +1,14 @@
+{
+   "data":[
+      {
+         "dni":123487339,
+         "message":"Creado exitosamente"
+      }
+   ],
+   "notification":{
+      "description":"OK",
+      "responseTime":"2022-03-30T12:54:13.5413 COT",
+      "code":"200",
+      "source":"ADDI Database"
+   }
+}

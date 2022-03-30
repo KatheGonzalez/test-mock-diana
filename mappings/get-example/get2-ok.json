@@ -1,0 +1,18 @@
+{
+  "scenarioName": "Status 200",
+  "request": {
+    "method": "GET",
+    "url": "/test/egresados/123456789"
+  },
+  "response": {
+    "status": 200,
+    "bodyFileName": "/get-response/response2-ok.json",
+    "headers": {
+      "Content-Type": "application/json;charset=UTF-8",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+      "Access-Control-Allow-Headers": "Accept, Content-Type, Content-Encoding, Server, Transfer-Encoding",
+      "x-frame-options": "DENY"
+    }
+  }
+}
