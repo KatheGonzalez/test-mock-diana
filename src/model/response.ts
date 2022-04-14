@@ -1,11 +1,11 @@
-import {Notification} from "./notification";
+import { Notification } from './notification';
 
 export class Response<T> {
-    data: T;
-    notification: Notification;
+  data: T;
+  notification: Notification;
 
-    constructor(data: T) {
-        this.data = data;
-        this.notification = new Notification();
-    }
+  constructor(data: T) {
+    this.data = data;
+    this.notification = new Notification();
+  }
 }

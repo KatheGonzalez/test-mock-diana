@@ -1,9 +1,17 @@
-import {Body, Controller, Delete, Get, Param, Post, Put} from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Post,
+  Put,
+} from '@nestjs/common';
 import { AppService } from './app.service';
-import {ApiUri} from "./const/config.constants";
-import {Graduated} from "./model/graduated";
-import {Message} from "./model/message";
-import {Response} from "./model/response";
+import { ApiUri } from './const/config.constants';
+import { Graduated } from './model/graduated';
+import { Message } from './model/message';
+import { Response } from './model/response';
 
 @Controller(ApiUri.graduated)
 export class AppController {
@@ -20,7 +28,10 @@ export class AppController {
   }
 
   @Put(':dni')
-  update(@Param('dni') dni: number, @Body() graduated: Graduated): Response<Message> {
+  update(
+    @Param('dni') dni: number,
+    @Body() graduated: Graduated,
+  ): Response<Message> {
     return new Response(this.appService.update(dni, graduated));
   }
 

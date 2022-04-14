@@ -1,3 +1,3 @@
 export const ApiUri = {
-    graduated: 'test/egresados'
+  graduated: 'test/egresados',
 };
