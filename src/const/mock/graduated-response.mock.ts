@@ -1,4 +1,4 @@
-import { Graduated } from '../model/graduated';
+import { Graduated } from '../../model/graduated';
 
 export const GetAllGraduates: Graduated[] = [
   {

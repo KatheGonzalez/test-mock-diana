@@ -1,0 +1,48 @@
+
+GET http://localhost:2000/orders
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+###
+
+POST http://localhost:2000/orders
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "dni": 1019104020,
+  "cellphone": 3113215520,
+  "full_name": "Pepita Manrique",
+  "place": "diag 23 a #23 - 2",
+  "date_requested": "22/03/2022",
+  "state": "CREATED",
+  "count": 23,
+  "brand": "Apidra",
+  "date_collected": null
+}
+
+###
+
+PUT http://localhost:2000/orders/update
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "id": "14bd58e7-29c2-4b8e-8db0-98bdfc7c7aaf",
+  "count": 26,
+  "state": "CREATED",
+  "brand": "Apidra",
+  "date_collected": "24/03/2022"
+}
+
+###
+
+PUT http://localhost:2000/orders/delete
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "id": "14bd58e7-29c2-4b8e-8db0-98bdfc7c7aaf",
+  "state": "DELETED"
+}
+
+###

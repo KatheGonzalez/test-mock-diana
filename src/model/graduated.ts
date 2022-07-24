@@ -1,7 +1,7 @@
 import { InMemoryDBEntity } from '@nestjs-addons/in-memory-db';
 
 export interface Graduated extends InMemoryDBEntity {
-  id : string;
+  id: string;
   dni: number;
   cellphone: number;
   first_name: string;

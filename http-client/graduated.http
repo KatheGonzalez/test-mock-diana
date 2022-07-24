@@ -1,0 +1,10 @@
+
+GET http://localhost:2000/test/egresados/12435533453
+Content-Type: application/json
+
+###
+
+GET http://localhost:2000/test/egresados
+Content-Type: application/json
+
+###

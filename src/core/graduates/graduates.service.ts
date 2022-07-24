@@ -1,21 +1,19 @@
 import { Injectable } from '@nestjs/common';
-import { Graduated } from './model/graduated';
-import { Message } from './model/message';
 import { InMemoryDBService } from '@nestjs-addons/in-memory-db';
-import { GetAllGraduates } from './const/mock-responses';
+import { Graduated } from '../../model/graduated';
+import { GetAllGraduates } from '../../const/mock/graduated-response.mock';
 
 @Injectable()
-export class AppService {
+export class GraduatesService implements GraduatesService {
   constructor(private readonly graduatesService: InMemoryDBService<Graduated>) {
     graduatesService.createMany(GetAllGraduates);
   }
 
-  getAll: () => Graduated[] = () => this.graduatesService.getAll();
+  getAll = () => this.graduatesService.getAll();
 
-  getOne: (dni: number) => Graduated = (dni) =>
-    this.graduatesService.query((g) => g.dni == dni)[0];
+  getOne = (dni) => this.graduatesService.query((g) => g.dni == dni)[0];
 
-  update: (dni: number, graduated: Graduated) => Message = (dni, graduated) => {
+  update = (dni, graduated) => {
     const previousGraduated = this.getOne(dni);
 
     if (previousGraduated) {
@@ -26,7 +24,7 @@ export class AppService {
     return { dni, message: 'No se encontraron registros con esta cédula' };
   };
 
-  delete: (dni: number) => Message = (dni) => {
+  delete = (dni) => {
     const graduatedToDelete = this.getOne(dni);
 
     if (graduatedToDelete) {
@@ -36,7 +34,7 @@ export class AppService {
     return { dni, message: 'No se encontró el usuario a eliminar' };
   };
 
-  create: (graduated: Graduated) => Message = (graduated) => {
+  create = (graduated) => {
     const { dni } = graduated;
     const previousGraduated = this.getOne(dni);
 

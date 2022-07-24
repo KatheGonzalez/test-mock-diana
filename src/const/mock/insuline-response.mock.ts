@@ -1,0 +1,40 @@
+import { Order } from '../../model/order';
+
+export const GET_ALL_ORDERS: Order[] = [
+  {
+    id: 'afe29838-9a57-4415-b2b3-3af3848c3768',
+    dni: 1019104059,
+    cellphone: 3113215520,
+    full_name: 'Pepito Perez',
+    place: 'diag 23 a #23 - 2',
+    date_requested: '22/03/2022',
+    state: 'CREATED',
+    count: 23,
+    brand: null,
+    date_collected: null,
+  },
+  {
+    id: '14bd58e7-29c2-4b8e-8db0-98bdfc7c7aaf',
+    dni: 1233899201,
+    cellphone: 31321402330,
+    full_name: 'Andres Manrique',
+    place: 'Cra 109 a #102 - 4',
+    date_requested: '21/04/2022',
+    state: 'ASSIGNED',
+    count: 12,
+    brand: 'Levemir',
+    date_collected: '24/04/2022',
+  },
+  {
+    id: '14bd58ed-29c3-4b8e-8db0-98bdfc7c7aaf',
+    dni: 65734014,
+    cellphone: 3123022484,
+    full_name: 'Camila Fajardo',
+    place: 'Calle 65 b #32 - 3',
+    date_requested: '01/06/2022',
+    state: 'DELETED',
+    count: 20,
+    brand: 'Humulin R',
+    date_collected: '05/06/2022',
+  },
+];

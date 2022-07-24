@@ -1,11 +1,9 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { InMemoryDBModule } from '@nestjs-addons/in-memory-db';
+import { UsersModule } from './core/users/users.module';
+import { OrdersModule } from './core/orders/orders.module';
+import { GraduatesModule } from './core/graduates/graduates.module';
 
 @Module({
-  imports: [InMemoryDBModule.forFeature('graduated', {})],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [GraduatesModule, OrdersModule, UsersModule],
 })
 export class AppModule {}

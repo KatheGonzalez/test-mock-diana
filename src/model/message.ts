@@ -1,4 +1,4 @@
 export class Message {
-  dni: number;
+  dni?: number;
   message: string;
 }
